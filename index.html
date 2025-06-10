@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Joyeux Anniversaire Chloé</title>
+  <style>
+    body {
+      margin-bottom: 800px;
+      box-sizing: border-box;
+      padding-bottom: 300px;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #8e2de2, #ff6ec4);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+    }
+    h2 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    #photo-container {
+      margin: 20px auto;
+      width: 500px;
+      height: 500px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    #photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .button {
+      margin: 20px auto;
+      background-color: #5a189a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #7b2cbf;
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: gold;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10px); }
+      100% { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+<body>
+    <div class="confetti" style="left: 10%; animation-delay: 0s;">MERIE</div>
+    <div class="confetti" style="left: 20%; animation-delay: 0.5s;">MERIE</div>
+    <div class="confetti" style="left: 30%; animation-delay: 1s;">MERIE</div>
+    <div class="confetti" style="left: 40%; animation-delay: 1.5s;">MERIE</div>
+    <div class="confetti" style="left: 50%; animation-delay: 2s;">MERIE</div>
+    <div class="confetti" style="left: 60%; animation-delay: 2.5s;">MERIE</div>
+    <div class="confetti" style="left: 70%; animation-delay: 3s;">MERIE</div>
+    <div class="confetti" style="left: 80%; animation-delay: 3.5s;">MERIE</div>
+    <div class="confetti" style="left: 90%; animation-delay: 4s;">MERIE</div>
+
+  <h1>Joyeux Anniversaire !</h1>
+  <h2>MERIE</h2>
+  <p>🎉 10 Juin 2025 🎉</p>
+
+  <div id="photo-container">
+    <img id="photo" src="images/photo1.jpg" alt="Photo de couple">
+    
+    <img id="photo" src="images/photo4.jpg" alt="Photo de couple">
+  </div>
+    <div id="photo-container">
+        <img id="photo" src="images/photo2.png" alt="Photo de couple">
+    </div>
+  <p>Voici quelques photos de nous :</p>
+
+  <button class="button" onclick="changePhoto()">Changer la photo</button>
+    <p>Merci pour tout, MERIE !</p>
+    <p>Tu es la meilleure !</p>
+    <p>Je t'aime énormément !</p>
+    <p>J'espère que tu as passé une journée merveilleuse !</p>
+    <p>Je suis tellement heureux de partager ma vie avec toi !</p>
+    <p>Tu es la personne la plus incroyable que j'ai jamais rencontrée !</p>
+    <p>Merci pour tous les moments inoubliables que nous avons partagés !</p>
+
+  <footer>cree by kuny137 copyright</footer>
+  
+  <script>
+    const photos = ['photo1.jpg', 'photo2.png', 'photo3.png'];
+    let index = 0;
+    function changePhoto() {
+      index = (index + 1) % photos.length;
+      document.getElementById('photo').src = photos[index];
+    }
+  </script>
+</body>
+</html>
